@@ -1,8 +1,8 @@
-# 🌾 Fusarium Head Blight Detection in Wheat Crops using Machine Learning
+# Fusarium Head Blight Detection in Wheat Crops using Machine Learning
 
 A deep learning-based classification project to detect **Fusarium Head Blight (FHB)** in wheat crops using **EfficientNet B0**. This work was conducted as part of the course _Crop Protection Chemicals and Technopreneurship Development [EP60046]_ at **IIT Kharagpur**.
 
-## 📌 Overview
+## Overview
 
 Fusarium Head Blight (FHB) is a fungal disease that affects wheat crops, causing significant yield loss and posing health risks due to mycotoxins. This project aims to:
 
@@ -10,7 +10,7 @@ Fusarium Head Blight (FHB) is a fungal disease that affects wheat crops, causing
 - Classify images as **Healthy (Class 0)** or **Infected (Class 1)**.
 - Implement and train the **EfficientNet B0** architecture for binary classification.
 
-## 📚 Literature Review
+## Literature Review
 
 Previous work on FHB detection has relied on:
 - Manual scoring (subjective and labor-intensive)
@@ -21,9 +21,9 @@ Our project builds on this by implementing **EfficientNet B0** with binary label
 
 ---
 
-## 🧠 Methodology
+## Methodology
 
-### 📂 Dataset
+### Dataset
 
 - Source: [Rößle et al. (2023)](https://spj.science.org/doi/abs/10.34133/plantphenomics.0068)
 - RGB images from 2021 season, annotated by raters on a scale of 1 to 9
@@ -31,13 +31,13 @@ Our project builds on this by implementing **EfficientNet B0** with binary label
   - Score ≤ 4 → Healthy
   - Score > 4 → Infected
 
-### 🧹 Preprocessing
+### Preprocessing
 
 - Combined images from different cameras
 - Resized all images to **224×224** using OpenCV
 - Train-test split: **80%-20%**
 
-### 🏗️ Model Architecture
+### Model Architecture
 
 - Used **EfficientNet B0**
 - Input: 224×224 RGB images
@@ -46,7 +46,7 @@ Our project builds on this by implementing **EfficientNet B0** with binary label
 - Loss Function: **Categorical Cross-Entropy**
 - Epochs: **20**
 
-### 📏 Evaluation Metrics
+### Evaluation Metrics
 
 - **Accuracy**
 - **Precision**, **Recall**, **F1-score**
@@ -54,12 +54,12 @@ Our project builds on this by implementing **EfficientNet B0** with binary label
 
 ---
 
-## 📊 Results
+## Results
 
-### ✔️ Accuracy vs Epochs
+### Accuracy vs Epochs
 - The model showed increasing accuracy with training, reaching **~69%**.
 
-### 📉 Confusion Matrix
+### Confusion Matrix
 
 |                | Predicted Healthy | Predicted Infected |
 |----------------|-------------------|--------------------|
@@ -69,7 +69,7 @@ Our project builds on this by implementing **EfficientNet B0** with binary label
 - **High recall** for infected plants
 - **Low precision** for healthy plants (many false positives)
 
-### 📋 Classification Report
+### Classification Report
 
 | Class | Precision | Recall | F1-score |
 |-------|-----------|--------|----------|
@@ -79,7 +79,7 @@ Our project builds on this by implementing **EfficientNet B0** with binary label
 
 ---
 
-## 💬 Discussion
+## Discussion
 
 - Strength: Model effectively detects infected plants
 - Limitation: Misclassifies many healthy plants
@@ -90,13 +90,13 @@ Our project builds on this by implementing **EfficientNet B0** with binary label
 
 ---
 
-## ✅ Conclusion
+## Conclusion
 
 This project successfully demonstrates a deep learning pipeline using **EfficientNet B0** for FHB detection. It highlights the potential of image-based crop disease monitoring and sets the foundation for scalable, field-deployable solutions.
 
 ---
 
-## 📖 References
+## References
 
 1. Moustafa Gaber, *Fusarium head blight detection in wheat with deep learning and RGB images*, 2024.
 2. Rößle et al., *Efficient Non-Invasive FHB Estimation Using RGB Images from a Novel Multi-Year, Multi-Rater Dataset*, Plant Phenomics, 2023.
